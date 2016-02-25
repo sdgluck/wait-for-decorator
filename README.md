@@ -26,6 +26,11 @@ If you have a class that performs some asynchronous operation during initialisat
               // ...and now actually do the 'someMethod' operation
           })
       }
+      anotherMethod () {
+          return this.promise.then(() => {
+              // Do 'anotherMethod' operation
+          })
+      }
     }
     
 Which gets ugly when you have lots of methods implementing this same behaviour. Instead, decorate the method using `wait-for-decorator`:
@@ -33,6 +38,11 @@ Which gets ugly when you have lots of methods implementing this same behaviour. 
     @waitFor('promise')
     someMethod () {
         // Everything here will run after `this.promise` resolves
+    }
+
+    @waitFor('promise')
+    anotherMethod () {
+        // And everything here too!
     }
 
 ## Usage
