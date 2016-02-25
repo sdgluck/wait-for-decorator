@@ -10,7 +10,7 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 
 ## Install
 
-  npm install wait-for-decorator --save
+    npm install wait-for-decorator --save
 
 ## Usage
 
@@ -78,4 +78,5 @@ __Wait for multiple Promises__
 ## Contributing
 
 All pull requests and issues welcome!
+
 If you're not sure how, check out Kent C. Dodds' [great video tutorials on egghead.io](https://egghead.io/lessons/javascript-identifying-how-to-contribute-to-an-open-source-project-on-github)!
