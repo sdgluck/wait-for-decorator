@@ -1,0 +1,40 @@
+{
+  "name": "wait-for-decorator",
+  "version": "0.0.1",
+  "description": "Decorate a class method to return and wait on a Promise on the class instance before executing",
+  "author": "Sam Gluck <sdgluck@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdgluck/wait-for-decorator.git"
+  },
+  "engines": {
+    "node": ">=4.1.1"
+  },
+  "scripts": {
+    "lint": "standard ./index.js",
+    "test": "babel test.js --plugins transform-decorators-legacy | node",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/sdgluck/wait-for-decorator/issues"
+  },
+  "keywords": [
+    "decorator",
+    "class",
+    "method",
+    "wait",
+    "for",
+    "promise",
+    "resolved",
+    "resolve",
+    "babel"
+  ],
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "standard": "^6.0.5"
+  }
+}
