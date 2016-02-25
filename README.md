@@ -68,7 +68,7 @@ __Wait for multiple Promises__
 
       @waitFor(['firstPromise', 'secondPromise'])
       sayMessage () {
-        console.log(this.parts.join(''))
+        console.log(this.message)
       }
     }
 
