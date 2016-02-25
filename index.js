@@ -33,7 +33,7 @@ function waitFor (promiseName) {
 /* global define:false window:false */
 if (typeof define === 'function' && define.amd) {
   define('waitFor', waitFor)
-} else if (typeof module.exports === 'object') {
+} else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
   module.exports = waitFor
 } else if (typeof window !== 'undefined') {
   window.waitFor = waitFor
