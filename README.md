@@ -7,6 +7,10 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 <a href="http://badge.fury.io/js/wait-for-decorator"><img alt="npm version" src="https://badge.fury.io/js/wait-for-decorator.svg"></a>
 <a href="https://travis-ci.org/sdgluck/wait-for-decorator"><img alt="CI build status" src="https://travis-ci.org/sdgluck/wait-for-decorator.svg"></a>
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+    
+## Install
+
+    npm install wait-for-decorator --save
 
 ## @waitFor
 
@@ -30,16 +34,12 @@ Which gets ugly when you have lots of methods implementing this same behaviour. 
     someMethod () {
         // Everything here will run after `this.promise` resolves
     }
-    
-## Install
-
-    npm install wait-for-decorator --save
 
 ## Usage
 
 `@waitFor(promiseName)`
 
-__promiseName__ {String|Array<String>} name of promise or array of names of promises to wait on
+__promiseName__ {String|String[]} name of promise or array of names of promises to wait on
 
 ## Requirements
 
