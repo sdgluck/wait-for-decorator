@@ -1,6 +1,6 @@
 {
   "name": "wait-for-decorator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Decorate a class method to return and wait on a Promise or multiple Promises on the class instance before executing",
   "author": "Sam Gluck <sdgluck@gmail.com>",
   "license": "MIT",
@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "standard ./index.js",
     "test": "babel test.js --plugins transform-decorators-legacy | node",
-    "prepublish": "npm run lint"
+    "prepublish": "npm run lint && npm test"
   },
   "bugs": {
     "url": "https://github.com/sdgluck/wait-for-decorator/issues"
