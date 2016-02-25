@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "standard ./index.js",
     "test": "babel test.js --plugins transform-decorators-legacy | node",
-    "prepublish": "npm run lint && npm run build"
+    "prepublish": "npm run lint"
   },
   "bugs": {
     "url": "https://github.com/sdgluck/wait-for-decorator/issues"
