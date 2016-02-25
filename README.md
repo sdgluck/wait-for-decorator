@@ -1,4 +1,4 @@
-# waitFor
+# wait-for-decorator
 
 > Decorate a class method to return and wait on a Promise on the class instance before executing
 
