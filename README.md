@@ -8,6 +8,29 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 <a href="https://travis-ci.org/sdgluck/wait-for-decorator"><img alt="CI build status" src="https://travis-ci.org/sdgluck/wait-for-decorator.svg"></a>
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+## @waitFor
+
+If you have a class that performs some asynchronous operation during initialisation but don't want consumption of its methods to be hindered by forcing their invocation to happen _after_ initialisation is complete, you will do something like this:
+
+    class Example {
+      constructor () {
+          this.promise = initialise()
+      }
+      someMethod () {
+          // Ensure init is complete internally...
+          return this.promise.then(() => {
+              // ...and now actually do the 'someMethod' operation
+          })
+      }
+    }
+    
+Which gets ugly when you have lots of methods implementing this same behaviour. Instead, decorate the method using `wait-for-decorator`:
+
+    @waitFor('promise')
+    someMethod () {
+        // Everything here will run after `this.promise` resolves
+    }
+    
 ## Install
 
     npm install wait-for-decorator --save
