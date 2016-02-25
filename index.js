@@ -5,7 +5,7 @@
  * once the Promise(s) defined by `promiseName` on the instance has resolved.
  * @param {String|Array} promiseName name of promise(s) on the class instance
  */
-module.exports = function waitFor (promiseName) {
+function waitFor (promiseName) {
   const promises = Array.isArray(promiseName)
     ? promiseName
     : [promiseName]
@@ -28,4 +28,18 @@ module.exports = function waitFor (promiseName) {
       }.bind(this)
     }
   }
+}
+
+/* global define:false window:false */
+if (typeof define === 'function' && define.amd) {
+  define('waitFor', waitFor)
+} else if (typeof exports === 'object') {
+  module.exports = waitFor
+} else if (typeof window !== 'undefined') {
+  window.waitFor = waitFor
+} else {
+  throw new Error(
+    'Environment is not supported. Please raise an issue at ' +
+    'https://github.com/sdgluck/wait-for-decorator/issues'
+  )
 }
