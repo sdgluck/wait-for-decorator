@@ -1,6 +1,6 @@
 # wait-for-decorator
 
-> Decorate a class method to return and wait on a Promise or multiple Promises on the class instance before executing
+> Decorate a class method to return and wait on a Promise on the class instance before executing
 
 Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 
