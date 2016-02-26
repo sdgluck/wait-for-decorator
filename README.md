@@ -54,7 +54,8 @@ __promiseName__ {String|String[]} name of promise or array of names of promises 
 ## Requirements
 
 - Node >=4.1.1
-- `babel-plugin-transform-decorators-legacy` ([npm](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy))
+- Babel >=5
+- `babel-plugin-transform-decorators-legacy` (Babel 6 only) ([npm](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy))
 
 ## Examples
 
