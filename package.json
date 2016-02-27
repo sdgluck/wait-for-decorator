@@ -1,7 +1,7 @@
 {
   "name": "wait-for-decorator",
   "version": "0.0.7",
-  "description": "Decorate a class method to return and wait on a Promise or multiple Promises on the class instance before executing",
+  "description": "Decorate a class method to return and wait on a Promise on the class instance before executing",
   "author": "Sam Gluck <sdgluck@gmail.com>",
   "license": "MIT",
   "repository": {
