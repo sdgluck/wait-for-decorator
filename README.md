@@ -12,6 +12,18 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 
     npm install wait-for-decorator --save
 
+## Usage
+
+`@waitFor(promiseName)`
+
+__promiseName__ {String|String[]} name of promise or array of names of promises to wait on
+
+## Requirements
+
+- Node >=4.1.1
+- Babel >=5
+- `babel-plugin-transform-decorators-legacy` (Babel 6 only) ([npm](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy))
+
 ## @waitFor
 
 If you have a class that performs some asynchronous operation during initialisation but don't want consumption of its methods to be hindered by forcing their invocation to happen _after_ initialisation is complete, you will do something like this:
@@ -44,18 +56,6 @@ Which gets ugly when you have lots of methods implementing this same behaviour. 
     anotherMethod () {
         // And everything here too!
     }
-
-## Usage
-
-`@waitFor(promiseName)`
-
-__promiseName__ {String|String[]} name of promise or array of names of promises to wait on
-
-## Requirements
-
-- Node >=4.1.1
-- Babel >=5
-- `babel-plugin-transform-decorators-legacy` (Babel 6 only) ([npm](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy))
 
 ## Examples
 
