@@ -20,7 +20,7 @@ class SinglePromise {
   }
 }
 
-class MultiplePromises {
+class MultiplePromisesArray {
   constructor (messages) {
     this.message = ''
     this.firstPromise = new Promise((resolve) => {
@@ -43,8 +43,32 @@ class MultiplePromises {
   }
 }
 
+class MultiplePromisesArguments {
+  constructor (messages) {
+    this.message = ''
+    this.firstPromise = new Promise((resolve) => {
+      setTimeout(() => {
+        this.message += messages[0]
+        resolve()
+      }, 50)
+    })
+    this.secondPromise = new Promise((resolve) => {
+      setTimeout(() => {
+        this.message += messages[1]
+        resolve()
+      }, 100)
+    })
+  }
+
+  @waitFor('firstPromise', 'secondPromise')
+  sayMessage () {
+    return this.message
+  }
+}
+
 const single = new SinglePromise('Hello, World!')
-const multiple = new MultiplePromises(['Hello, ', 'World!'])
+const multipleArray = new MultiplePromisesArray(['Hello, ', 'World!'])
+const multipleArgs = new MultiplePromisesArguments(['Hello, ', 'World!'])
 
 single.sayMessage().then(function (message) {
   if (message !== 'Hello, World!') {
@@ -53,9 +77,16 @@ single.sayMessage().then(function (message) {
   }
 })
 
-multiple.sayMessage().then(function (message) {
+multipleArray.sayMessage().then(function (message) {
   if (message !== 'Hello, World!') {
-    console.log(`Multiple promises, message incorrect: ${message}`)
+    console.log(`Multiple promises with array, message incorrect: ${message}`)
+    process.exit(1)
+  }
+})
+
+multipleArgs.sayMessage().then(function (message) {
+  if (message !== 'Hello, World!') {
+    console.log(`Multiple promises with arguments, message incorrect: ${message}`)
     process.exit(1)
   }
 })

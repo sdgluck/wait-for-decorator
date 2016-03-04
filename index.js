@@ -8,6 +8,8 @@
 function waitFor (promiseName) {
   const promises = Array.isArray(promiseName)
     ? promiseName
+    : arguments.length > 1
+    ? Array.from(arguments)
     : [promiseName]
   return (target, prop, descriptor) => {
     const fn = descriptor.value
