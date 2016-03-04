@@ -1,6 +1,5 @@
 'use strict'
 
-let assert = require('assert')
 let waitFor = require('./index.js')
 
 class SinglePromise {
