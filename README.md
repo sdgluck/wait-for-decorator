@@ -14,7 +14,11 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 
 ## Usage
 
-`@waitFor(promiseName)`
+    @waitFor(promiseName)
+    classMethod () {}
+
+Decorate a class method to return and wait on a Promise. 
+The function also accepts multiple promises, each as an argument, instead of an array of promises, if this approach is preferred.
 
 __promiseName__ {String|String[]} name of promise or array of names of promises to wait on
 
