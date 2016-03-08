@@ -14,11 +14,15 @@ Made with ❤ at [@outlandish](http://www.twitter.com/outlandish)
 
 ## Usage
 
-    @waitFor(promiseName)
-    classMethod () {}
+Wait on a single Promise:
 
-Decorate a class method to return and wait on a Promise. 
-The function also accepts multiple promises, each as an argument, instead of an array of promises, if this approach is preferred.
+    @waitFor('promiseName')
+    
+Wait on multiple promises:
+
+    @waitFor(['promiseName1', 'promiseName2'])
+    // or...
+    @waitFor('promiseName1', 'promiseName2')
 
 __promiseName__ {String|String[]} name of promise or array of names of promises to wait on
 
