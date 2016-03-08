@@ -24,8 +24,6 @@ Wait on multiple promises:
     // or...
     @waitFor('promiseName1', 'promiseName2')
 
-__promiseName__ {String|String[]} name of promise or array of names of promises to wait on
-
 ## Requirements
 
 - Node >=4.1.1
