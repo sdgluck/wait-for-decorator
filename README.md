@@ -41,7 +41,7 @@ If you have a class that performs some asynchronous operation during initialisat
           this.promise = this.initialise()
       }
       initialise () {
-          ...returns a Promise that resolves on init complete
+          // ...returns a Promise that resolves on init complete
       }
       someMethod () {
           // Ensure init is complete internally...
