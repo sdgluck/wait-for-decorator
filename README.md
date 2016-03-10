@@ -18,11 +18,11 @@ Wait on a single Promise:
 
     @waitFor('promiseName')
     
-Wait on multiple Promises (array):
+Wait on multiple Promises (as array):
 
     @waitFor(['promiseName1', 'promiseName2'])
 
-Wait on multiple Promises (arguments):
+Wait on multiple Promises (as arguments):
 
     @waitFor('promiseName1', 'promiseName2')
 
