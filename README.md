@@ -38,7 +38,10 @@ If you have a class that performs some asynchronous operation during initialisat
 
     class Example {
       constructor () {
-          this.promise = initialise()
+          this.promise = this.initialise()
+      }
+      initialise () {
+          ...returns a Promise that resolves on init complete
       }
       someMethod () {
           // Ensure init is complete internally...
