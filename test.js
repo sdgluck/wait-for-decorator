@@ -67,7 +67,7 @@ class MultiplePromisesArguments {
 
 const single = new SinglePromise('Hello, World!')
 const multipleArray = new MultiplePromisesArray(['Hello, ', 'World!'])
-const multipleArgs = new MultiplePromisesArguments('Hello, ', 'World!')
+const multipleArgs = new MultiplePromisesArguments(['Hello, ', 'World!'])
 
 single.sayMessage().then(function (message) {
   if (message !== 'Hello, World!') {
